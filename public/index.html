@@ -17,21 +17,21 @@
 
   <div data-controller="clipboard">
     PIN: <input data-clipboard-target="pin" type="text" value="1234" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
   
   <div data-controller="clipboard">
-    PIN: <input data-clipboard-target="pin" type="text" value="4321" readonly>
+    PIN: <input data-clipboard-target="pin" type="text" value="4321" class="clipboard-button" readonly>
     <button data-action="clipboard#copy">Copy to Clipboard</button>
   </div>
 
   <div data-controller="clipboard">
-    PIN: <input data-clipboard-target="pin" type="text" value="a link button" readonly>
+    PIN: <input data-clipboard-target="pin" type="text" value="a link button" class="clipboard-button" readonly>
     <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
 
   <div data-controller="clipboard">
-    PIN: <textarea data-clipboard-target="pin" type="text" readonly>A text area can be used because the controller
+    PIN: <textarea data-clipboard-target="pin" type="text" class="clipboard-button" readonly>A text area can be used because the controller
       only expects the target to have a select() method and a value. </textarea>
     <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
