@@ -2,6 +2,8 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
 
+    // This guarantees I have a nameTarget property that returns the first 
+    // matching target element (the one with the data-hello-target on the HTML).
     static targets = [ "name" ];
 
     connect() {
@@ -9,12 +11,10 @@ export default class extends Controller {
     }
 
     greet() {
-        
-        const element = this.nameTarget;
-        const name = element.value;
+        console.log("Hello", this.name);
+    }
 
-        console.log("Cool, now I'm operating on some event from ", this.element);
-        console.log("Hello", name);
-
+    get name() {
+        return this.nameTarget.value
     }
 }
