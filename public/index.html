@@ -38,7 +38,17 @@
 
   <br>
 
-  <div data-controller="slideshow" data-slideshow-index-value="1">
+  <div data-controller="slideshow" data-slideshow-index-value="0">
+    <button class="slideshow-button" data-action="slideshow#previous"> ← </button>
+    <button class="slideshow-button" data-action="slideshow#next"> → </button>
+  
+    <div data-slideshow-target="slide">🐵</div>
+    <div data-slideshow-target="slide">🙈</div>
+    <div data-slideshow-target="slide">🙉</div>
+    <div data-slideshow-target="slide">🙊</div>
+  </div>
+
+  <div data-controller="slideshow" data-slideshow-index-value="3">
     <button class="slideshow-button" data-action="slideshow#previous"> ← </button>
     <button class="slideshow-button" data-action="slideshow#next"> → </button>
   
