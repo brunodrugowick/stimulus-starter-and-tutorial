@@ -4,7 +4,8 @@ export default class extends Controller {
 
     static targets = [ "pin" ]
 
-    copy() {
+    copy(event) {
+        event.preventDefault()
         console.log("A method to copy stuff to the clipboard. JS needed...")
         console.log(this.pin)
 
