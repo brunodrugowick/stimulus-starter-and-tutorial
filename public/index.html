@@ -29,5 +29,12 @@
     PIN: <input data-clipboard-target="pin" type="text" value="a link button" readonly>
     <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
+
+  <div data-controller="clipboard">
+    PIN: <textarea data-clipboard-target="pin" type="text" readonly>A text area can be used because the controller
+      only expects the target to have a select() method and a value. </textarea>
+    <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+  </div>
+
 </body>
 </html>
