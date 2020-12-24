@@ -11,11 +11,11 @@ export default class extends Controller {
     }
 
     next() {
-        this.indexValue++
+        this.indexValue >= this.slideTargets.length - 1 ? this.slideTargets.length - 1 : this.indexValue++
     }
 
     previous() {
-        this.indexValue--
+        this.indexValue <= 0 ? 0 : this.indexValue--
     }
 
     showCurrentSlide() {
