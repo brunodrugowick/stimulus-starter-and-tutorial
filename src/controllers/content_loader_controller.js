@@ -15,14 +15,24 @@ export default class extends Controller {
     }
 
     startRefreshing() {
-        setInterval(() => {
+        this.refreshTimer = setInterval(() => {
             this.load()
         }, this.refreshIntervalValue)
+    }
+
+    stopRefreshing() {
+        if (this.refreshTimer) {
+            cleanInterval(this.refreshTimer)
+        }
     }
 
     load() {
         fetch(this.urlValue)
             .then(response => response.text())
             .then(html => this.element.innerHTML = html)
+    }
+
+    disconnect() {
+        this.stopRefreshing()
     }
 }
